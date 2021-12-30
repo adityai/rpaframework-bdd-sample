@@ -1,5 +1,6 @@
 *.html
 *.xml
 *.png
-/results/
-/pabot_results/
+results
+.pabotsuitenames
+pabot_results
