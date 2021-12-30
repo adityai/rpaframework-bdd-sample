@@ -2,3 +2,4 @@
 *.xml
 *.png
 /results/
+/pabot_results/
