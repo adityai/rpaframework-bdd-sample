@@ -1,3 +1,5 @@
 robotframework
 robotframework-seleniumlibrary
 robotframework-pabot
+sa11y
+robotframework-saucelabs
