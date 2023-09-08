@@ -1,5 +1,5 @@
 *** Settings ***
-Library       SeleniumLibrary
+Library       RPA.Browser.Selenium
 
 *** Variables ***
 ${USERNAME_FIELD}             //input[@name='username']
