@@ -59,10 +59,6 @@ Pygments==2.16.1
 PyJWT==2.8.0
 PyMeeus==0.5.12
 pynput-robocorp-fork==5.0.0
-pyobjc-core==9.2
-pyobjc-framework-ApplicationServices==9.2
-pyobjc-framework-Cocoa==9.2
-pyobjc-framework-Quartz==9.2
 pyOpenSSL==21.0.0
 pyotp==2.9.0
 pyparsing==3.0.6
