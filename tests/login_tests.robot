@@ -1,4 +1,7 @@
+
 *** Settings ***
+Library           ../utils/database_utils.py
+Library    RPA.Tables
 Resource          ../resources.robot
 Resource          ../pages/login_page.robot
 Resource          ../steps/login_steps.robot
@@ -17,6 +20,16 @@ Valid Login
   GIVEN Login Page Opened
   WHEN Input Username And Password    ${valid_username}    ${valid_password}
   THEN Login is successful
+
+Try data driven
+  ${test_data}=    Get Test Data From Database    Try data driven
+  ${test_data}=    Export Table    ${test_data}
+  Log    ${test_data}[0][username]    
+  Log    ${test_data}[0][password]    
+  Log    ${test_data}[0][expected_message]
+  GIVEN Login Page Opened
+  WHEN Input Username And Password    ${test_data}[0][username]    ${test_data}[0][password]
+  THEN Error Message Displayed      ${test_data}[0][expected_message]
 
 Invalid Login
   [Template]    Login with Invalid Credentials
